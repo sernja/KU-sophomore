@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BattleController">
+   <children>
+      <ImageView fx:id="imageBg" fitHeight="400.0" fitWidth="709.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bg.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="m1Image" fitHeight="177.0" fitWidth="233.0" layoutX="15.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="m2Image" fitHeight="177.0" fitWidth="233.0" layoutX="443.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="mHealButton" layoutX="376.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleHealBtnOnAction" text="Heal">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font></Button>
+      <Button fx:id="mAtkButton" layoutX="279.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleAtkBtnOnAction" text="Atk" textFill="#6f1919" textOverrun="CLIP">
+         <font>
+            <Font name="Chiller" size="17.0" />
+         </font></Button>
+      <Label fx:id="m1NameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="26.0" prefHeight="31.0" prefWidth="133.0" textAlignment="CENTER" textFill="#ff4fa0">
+         <font>
+            <Font name="Berlin Sans FB" size="30.0" />
+         </font></Label>
+      <ProgressBar fx:id="m1HpProgressbar" layoutX="31.0" layoutY="242.0" prefWidth="200.0" progress="0.0" />
+      <ProgressBar fx:id="m2HpProgressbar" layoutX="459.0" layoutY="242.0" prefWidth="200.0" progress="0.0" />
+      <Label fx:id="roundLabel" alignment="CENTER" layoutX="260.0" layoutY="23.0" prefHeight="40.0" prefWidth="192.0" textFill="#eb2585">
+         <font>
+            <Font name="Cooper Black" size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="turnLabel" alignment="CENTER" layoutX="255.0" layoutY="82.0" prefHeight="35.0" prefWidth="192.0" textFill="#ff5151">
+         <font>
+            <Font name="Cooper Black" size="29.0" />
+         </font>
+      </Label>
+      <Text fx:id="m2Text" fill="#ab1919" layoutX="401.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="282.0000014901161">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="m1Text" fill="#9225c2" fontSmoothingType="LCD" layoutX="15.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="281.99999948590994">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="20.0" />
+         </font>
+      </Text>
+      <Label fx:id="m2NameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="485.0" layoutY="26.0" prefHeight="31.0" prefWidth="148.0" textAlignment="CENTER" textFill="#ff4fa0">
+         <font>
+            <Font name="Berlin Sans FB" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="m1WinImageview" fitHeight="211.0" fitWidth="140.0" layoutX="286.0" layoutY="57.0">
+         <image>
+            <Image url="@../images/win1.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="m2WinImageview" fitHeight="200.0" fitWidth="220.0" layoutX="235.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/win2.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
