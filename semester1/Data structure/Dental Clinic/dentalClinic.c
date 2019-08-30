@@ -62,28 +62,29 @@ int main(){
     int timeCount;
     scanf("%d", &timeCount);
     for(int i = 0; i < numcustomer; i++){
-        int boolean = 0;
-        for(int j = 0; j < numCustomerOut; j++){
-            if(strcmp(arrNameOut[j] ,arrStcCustomer[i].name) == 0){
-                boolean = 1;
-                break;
-            }
-        }
-        if(boolean){
-            boolean = 0;
-            continue;
-        }else{
-            timeCount -= arrStcCustomer[i].time;
-            if(timeCount <= 0){
-                int a = timeCount*(-1);
-                if(a <= arrStcCustomer[i].time){
-                    i += 2;
-                    puts(arrStcCustomer[i].name);
-                } else {
-                    puts(arrStcCustomer[i].name);
+        timeCount -= arrStcCustomer[i].time;
+        if(timeCount <= 0){
+            i++;
+            if(timeCount == 0){
+                i++;
+                for(int j = 0; j < numCustomerOut; j++){
+                    if(strcmp(arrNameOut[j] ,arrStcCustomer[i].name) == 0){
+                        i++;
+                        break;
+                    }
                 }
+                puts(arrStcCustomer[i].name);
+            } else {
+                for(int j = 0; j < numCustomerOut; j++){
+                    if(strcmp(arrNameOut[j] ,arrStcCustomer[i].name) == 0){
+                        i++;
+                        break;
+                    }
+                }
+                puts(arrStcCustomer[i].name);
             }
         }
+        
     }
     return 0;
 }
