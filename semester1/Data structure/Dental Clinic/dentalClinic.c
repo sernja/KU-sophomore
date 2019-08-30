@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 typedef struct customer_{
     char name[41];
@@ -12,32 +13,26 @@ int inputNumcustomer(){
     return num;
 }
 
-
-void intputArrStcCustomer(StructCustomer arrStcCustomer, char *arr){
+StructCustomer intputArrStcCustomer(StructCustomer arrStcCustomer, char *arr){
     int boolean = 0;
     int j = 0;
     for(int i = 0; arr[i] != '\0'; i++){
         if(arr[i] == ' ') {
-            i += 5;
+            i += 5 ;
             boolean = 1;
         }
         else {
             if(boolean) {
-                arrStcCustomer.time = atoi(arr[i]);
+                arrStcCustomer.time = atoi(&arr[i]);
+                break;
             } else {
                 arrStcCustomer.name[j] = arr[i];
                 j++;
             }
         }
     }
-}
-
-int skipStcCustomer(char *arrName, StructCustomer arrStruct[], int out){
-    for(int i = 0; i < out; i++){
-        if(strcmp(arrName, arrStruct[i].name) == 0){
-            return i;
-        }
-    }
+    arrStcCustomer.name[j] = '\0';
+    return arrStcCustomer;
 }
 
 int main(){
@@ -47,33 +42,46 @@ int main(){
 
     StructCustomer arrStcCustomer[numcustomer];
 
-    //printf("%d\n", numcustomer);
     getchar();//customer_in
     for(int i = 0; i < numcustomer; i++){
         char arr[58];
         getchar();
         gets(arr);
-        intputArrStcCustomer(arrStcCustomer[i], arr);
-        //puts(arr);
+        arrStcCustomer[i] = intputArrStcCustomer(arrStcCustomer[i], arr);
     }
 
     numCustomerOut = inputNumcustomer();//customerOut
-    int arrIndexCustomerOut[numCustomerOut];
-
+    char arrNameOut[numCustomerOut][41];
     getchar();
     for(int i = 0; i < numCustomerOut; i++){
-        char arrNameOut[41];
+        
         getchar();
-        gets(arrNameOut);
-        arrIndexCustomerOut[i] = skipStcCustomer(arrNameOut, arrStcCustomer, numCustomerOut);
+        gets(arrNameOut[i]);
     }
 
     int timeCount;
-    scanf("%d", timeCount);
+    scanf("%d", &timeCount);
     for(int i = 0; i < numcustomer; i++){
+        int boolean = 0;
         for(int j = 0; j < numCustomerOut; j++){
-            if(arrIndexCustomerOut[j] == i){
+            if(strcmp(arrNameOut[j] ,arrStcCustomer[i].name) == 0){
+                boolean = 1;
                 break;
+            }
+        }
+        if(boolean){
+            boolean = 0;
+            continue;
+        }else{
+            timeCount -= arrStcCustomer[i].time;
+            if(timeCount <= 0){
+                int a = timeCount*(-1);
+                if(a <= arrStcCustomer[i].time){
+                    i += 2;
+                    puts(arrStcCustomer[i].name);
+                } else {
+                    puts(arrStcCustomer[i].name);
+                }
             }
         }
     }
