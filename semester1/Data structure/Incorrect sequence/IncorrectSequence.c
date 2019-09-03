@@ -11,7 +11,7 @@ void funInputarr(int *arr, int std){
 int main(){
     int numStudent;
     scanf("%d", &numStudent);
-    int arr1[numStudent+1], arr2[numStudent+1];
+    int arr1[numStudent], arr2[numStudent];
 
     funInputarr(arr1, numStudent);
     funInputarr(arr2, numStudent);
@@ -30,6 +30,6 @@ int main(){
             
         }
     }
-    printf("%d", numStudent+count);
+    printf("%d\n", numStudent+count);
 
 }
