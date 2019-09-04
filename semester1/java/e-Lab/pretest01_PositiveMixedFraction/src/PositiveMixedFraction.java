@@ -26,14 +26,14 @@ public class PositiveMixedFraction {
                 throw new RuntimeException("Error Nominator = " + getNominator());
            if(getDenominator() <= 0)
                 throw new RuntimeException("Error Denominator = " + getDenominator());
-       } else if(getNominator() > getDenominator()){
+       } else if(getNominator() % getDenominator() == 0){
            this.wholeNumber += nominator/denominator;
-           this.nominator = nominator%denominator;
-       }
-       else if(getNominator() == getDenominator()){
-           this.wholeNumber += 1;
            this.nominator = 0;
            this.denominator = 1;
+       }
+       else if(getNominator() > getDenominator()){
+           this.wholeNumber += nominator/denominator;
+           this.nominator = nominator%denominator;
        }
 
     }
