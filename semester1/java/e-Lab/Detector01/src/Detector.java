@@ -1,50 +1,35 @@
 //elab-source:Detector.java
 public class Detector {
-    private long countTrue;
-    private long countAns;
-    private long trueAns;
     private long[] arrAns;
-    private long[] arrCountTrue;
-    private int line;
-
-    public Detector(long[] arrAns, long trueAns, int line) {
+    private long trueAns;
+    private int numAns;
+    public Detector(long[] arrAns, long trueAns) {
         this.arrAns = arrAns;
         this.trueAns = trueAns;
-        this.arrCountTrue = new long[line];
+    }
+    public int findNumTrue(int line) {
+        int num = 0;
+        this.numAns = 0;
+        long i = trueAns;
+        long numStdAns = arrAns[line];
+        while (i > 0){
+            numAns++;
+            if(i%10 == numStdAns%10) num++;
+            i /= 10;
+            numStdAns /= 10;
+        }
+        return num;
     }
 
-    public void saveAns(long countAns, long countTrue, int line) {
-        this.countTrue = countTrue;
-        this.countAns = countAns;
-        this.line = line;
-        this.arrCountTrue[line-1] = countTrue;
+    public long[] getArrAns() {
+        return arrAns;
     }
 
     public long getTrueAns() {
         return trueAns;
     }
-    public long[] getArrAns() {
-        return arrAns;
-    }
-    public int getLine() {
-        return line;
-    }
-    public long getCountAns() {
-        return countAns;
-    }
-    public long getCountTrue() {
-        return countTrue;
-    }
 
-    public String toString(){
-        return getLine() + ": " + getCountTrue() + "/" + getCountAns();
-    }
-    public String avg(){
-        int countSum = 0;
-        for(long i : arrCountTrue){
-            countSum += i;
-        }
-        double ans = countSum/(double)getLine();
-        return "Average: " + ans;
+    public int getNumAns() {
+        return numAns;
     }
 }
