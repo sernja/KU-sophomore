@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="527.0" style="-fx-background-color: #55FACB;" xmlns="http://javafx.com/javafx/8.0.221" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.selectTheatre.SelectTheatreController">
+   <children>
+    <ImageView fx:id="movieImgV" fitHeight="160.0" fitWidth="130.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+   <Label fx:id="textName" layoutX="168.0" layoutY="17.0" prefHeight="31.0" prefWidth="407.0" text="name">
+      <font>
+         <Font name="Arial Rounded MT Bold" size="25.0" />
+      </font>
+   </Label>
+   <Label fx:id="textDate" layoutX="168.0" layoutY="53.0" prefHeight="31.0" prefWidth="407.0" text="name">
+      <font>
+         <Font name="Arial Rounded MT Bold" size="25.0" />
+      </font>
+   </Label>
+   <Label fx:id="textType" layoutX="168.0" layoutY="90.0" prefHeight="31.0" prefWidth="407.0" text="name">
+      <font>
+         <Font name="Arial Rounded MT Bold" size="25.0" />
+      </font>
+   </Label>
+   <Label fx:id="textTime" layoutX="168.0" layoutY="126.0" prefHeight="31.0" prefWidth="407.0" text="name">
+      <font>
+         <Font name="Arial Rounded MT Bold" size="25.0" />
+      </font>
+   </Label>
+   <Label layoutX="50.0" layoutY="251.0" text="Normal">
+      <font>
+         <Font name="Arial Rounded MT Bold" size="20.0" />
+      </font>
+   </Label>
+   <Label layoutX="175.0" layoutY="220.0" text="Theatre 1 ">
+      <font>
+         <Font name="Arial Rounded MT Bold" size="18.0" />
+      </font>
+   </Label>
+   <Button fx:id="btnTheatre1_1" layoutX="151.0" layoutY="254.0" mnemonicParsing="false" onAction="#BtnOnAction" text="12:30">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Button>
+   <Button fx:id="btnTheatre1_2" layoutX="243.0" layoutY="252.0" mnemonicParsing="false" onAction="#BtnOnAction" text="16:00">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Button>
+   <Label layoutX="50.0" layoutY="317.0" text="4k">
+      <font>
+         <Font name="Arial Rounded MT Bold" size="20.0" />
+      </font>
+   </Label>
+   <Label layoutX="175.0" layoutY="286.0" text="Theatre 2">
+      <font>
+         <Font name="Arial Rounded MT Bold" size="18.0" />
+      </font>
+   </Label>
+   <Button fx:id="btnTheatre2_1" layoutX="151.0" layoutY="316.0" mnemonicParsing="false" onAction="#BtnOnAction" text="11:00">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Button>
+   <Button fx:id="btnTheatre2_2" layoutX="243.0" layoutY="316.0" mnemonicParsing="false" onAction="#BtnOnAction" text="14:30">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Button>
+   <Label layoutX="50.0" layoutY="384.0" text="4k">
+      <font>
+         <Font name="Arial Rounded MT Bold" size="20.0" />
+      </font>
+   </Label>
+   <Label layoutX="175.0" layoutY="353.0" text="Theatre 3">
+      <font>
+         <Font name="Arial Rounded MT Bold" size="18.0" />
+      </font>
+   </Label>
+   <Button fx:id="btnTheatre3_1" layoutX="151.0" layoutY="383.0" mnemonicParsing="false" onAction="#BtnOnAction" text="23:20">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Button>
+   <Button fx:id="btnTheatre3_2" layoutX="243.0" layoutY="384.0" mnemonicParsing="false" onAction="#BtnOnAction" text="02:00">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Button>
+   <Label layoutX="51.0" layoutY="453.0" text="3D">
+      <font>
+         <Font name="Arial Rounded MT Bold" size="20.0" />
+      </font>
+   </Label>
+   <Label layoutX="176.0" layoutY="422.0" text="Theatre 4">
+      <font>
+         <Font name="Arial Rounded MT Bold" size="18.0" />
+      </font>
+   </Label>
+   <Button fx:id="btnTheatre4_1" layoutX="152.0" layoutY="452.0" mnemonicParsing="false" onAction="#BtnOnAction" text="12:20">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Button>
+   <Button fx:id="btnTheatre4_2" layoutX="244.0" layoutY="452.0" mnemonicParsing="false" onAction="#BtnOnAction" text="15:50">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Button>
+   <Label layoutY="189.0" prefHeight="14.0" prefWidth="575.0" style="-fx-background-color: #1C8C5B;">
+      <font>
+         <Font size="1.0" />
+      </font>
+   </Label>
+   </children>
+</AnchorPane>

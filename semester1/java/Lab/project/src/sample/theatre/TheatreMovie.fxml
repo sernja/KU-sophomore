@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #63F0DB;" xmlns="http://javafx.com/javafx/8.0.221" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.theatre.TheatreController">
+   <children>
+      <Text layoutX="316.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Screen">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="48.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="20.0" fitWidth="700.0" layoutX="50.0" layoutY="57.0">
+         <image>
+            <Image url="@../image/theatre/display.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="29.0" fitWidth="36.0" layoutX="57.0" layoutY="567.0">
+         <image>
+            <Image url="@../image/theatre/normal.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="29.0" fitWidth="49.0" layoutX="476.0" layoutY="567.0">
+         <image>
+            <Image url="@../image/theatre/premium.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="29.0" fitWidth="36.0" layoutX="280.0" layoutY="567.0">
+         <image>
+            <Image url="@../image/theatre/vip.png" />
+         </image>
+      </ImageView>
+      <Text fill="#5e1861" fontSmoothingType="LCD" layoutX="93.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Normal 200 baht" wrappingWidth="155.99999904632568">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#5e1861" fontSmoothingType="LCD" layoutX="545.0" layoutY="588.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Premium 700 baht" wrappingWidth="167.60156154632568">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#5e1861" fontSmoothingType="LCD" layoutX="335.0" layoutY="586.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VIP 300 baht" wrappingWidth="129.99999904632568">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Text>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-3.0" layoutY="538.0" prefHeight="17.0" prefWidth="814.0" style="-fx-background-color: #33DAEE;" text="Price" textFill="#791313">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <Pane fx:id="paneVIP" layoutX="3.0" layoutY="310.0" prefHeight="114.0" prefWidth="811.0" />
+      <Pane fx:id="panePremium" layoutX="3.0" layoutY="424.0" prefHeight="114.0" prefWidth="811.0" />
+      <Pane fx:id="paneNormal" layoutX="7.0" layoutY="196.0" prefHeight="114.0" prefWidth="811.0" />
+   </children>
+</AnchorPane>
