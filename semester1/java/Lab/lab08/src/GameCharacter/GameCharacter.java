@@ -5,7 +5,7 @@ public class GameCharacter {
     private String name;
     private int damage;
     private Weapon weapon;
-    public GameCharacter(String name, int hp, int damage, Weapon weapon) {
+    public GameCharacter(String name, int hp, int damage,Weapon weapon) {
         this.name = name;
         this.hp = hp;
         this.damage = damage;
@@ -18,6 +18,14 @@ public class GameCharacter {
         hp -= damage;
         if (hp < 0) hp = 0;
     }
+    public String getName() {
+        return name;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
     public Weapon getWeapon() {
         return weapon;
     }

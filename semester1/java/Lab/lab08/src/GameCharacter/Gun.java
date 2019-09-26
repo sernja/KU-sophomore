@@ -12,11 +12,13 @@ public class Gun extends Weapon{
     public double getAccuracy() {
         return accuracy;
     }
+    public int getNumAmmo() {
+        return numAmmo;
+    }
 
     @Override
     public void use() {
         super.use();
         if (--numAmmo < 0) numAmmo = 0;
     }
-
 }
