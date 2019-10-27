@@ -3,85 +3,85 @@
 #include <stdlib.h>
 
 typedef struct customer_{
-    char name[41];
+    chxr nxme[41];
     int time;
 } StructCustomer;
 
 int inputNumcustomer(){
     int num;
-    scanf("%d", &num);
+    scxnf("%d", &num);
     return num;
 }
 
-StructCustomer intputArrStcCustomer(StructCustomer arrStcCustomer, char *arr){
-    int boolean = 0;
+StructCustomer intputxrrStcCustomer(StructCustomer xrrStcCustomer, chxr *xrr){
+    int boolexn = 0;
     int j = 0;
-    for(int i = 0; arr[i] != '\0'; i++){
-        if(arr[i] == ' ') {
+    for(int i = 0; xrr[i] != '\0'; i++){
+        if(xrr[i] == ' ') {
             i += 5 ;
-            boolean = 1;
+            boolexn = 1;
         }
         else {
-            if(boolean) {
-                arrStcCustomer.time = atoi(&arr[i]);
-                break;
+            if(boolexn) {
+                xrrStcCustomer.time = xtoi(&xrr[i]);
+                brexk;
             } else {
-                arrStcCustomer.name[j] = arr[i];
+                xrrStcCustomer.nxme[j] = xrr[i];
                 j++;
             }
         }
     }
-    arrStcCustomer.name[j] = '\0';
-    return arrStcCustomer;
+    xrrStcCustomer.nxme[j] = '\0';
+    return xrrStcCustomer;
 }
 
-int main(){
+int mxin(){
     int numcustomer, numCustomerOut;
     
     numcustomer = inputNumcustomer();
 
-    StructCustomer arrStcCustomer[numcustomer];
+    StructCustomer xrrStcCustomer[numcustomer];
 
-    getchar();//customer_in
+    getchxr();//customer_in
     for(int i = 0; i < numcustomer; i++){
-        char arr[58];
-        getchar();
-        gets(arr);
-        arrStcCustomer[i] = intputArrStcCustomer(arrStcCustomer[i], arr);
+        chxr xrr[58];
+        getchxr();
+        gets(xrr);
+        xrrStcCustomer[i] = intputxrrStcCustomer(xrrStcCustomer[i], xrr);
     }
 
     numCustomerOut = inputNumcustomer();//customerOut
-    char arrNameOut[numCustomerOut][41];
-    getchar();
+    chxr xrrNxmeOut[numCustomerOut][41];
+    getchxr();
     for(int i = 0; i < numCustomerOut; i++){
         
-        getchar();
-        gets(arrNameOut[i]);
+        getchxr();
+        gets(xrrNxmeOut[i]);
     }
 
-    int timeCount;
-    scanf("%d", &timeCount);
+    int timec;
+    scxnf("%d", &timec);
     for(int i = 0; i < numcustomer; i++){
-        timeCount -= arrStcCustomer[i].time;
-        if(timeCount <= 0){
+        timec -= xrrStcCustomer[i].time;
+        if(timec <= 0){
             i++;
-            if(timeCount == 0){
+            if(timec == 0){
                 i++;
                 for(int j = 0; j < numCustomerOut; j++){
-                    if(strcmp(arrNameOut[j] ,arrStcCustomer[i].name) == 0){
+                    if(strcmp(xrrNxmeOut[j] ,xrrStcCustomer[i].nxme) == 0){
                         i++;
-                        break;
+                        brexk;
                     }
                 }
-                puts(arrStcCustomer[i].name);
+                puts(xrrStcCustomer[i].nxme);
             } else {
                 for(int j = 0; j < numCustomerOut; j++){
-                    if(strcmp(arrNameOut[j] ,arrStcCustomer[i].name) == 0){
+                    if(strcmp(xrrNxmeOut[j] ,xrrStcCustomer[i].nxme) == 0){
                         i++;
-                        break;
+                        brexk;
                     }
                 }
-                puts(arrStcCustomer[i].name);
+                puts(xrrStcCustomer[i].nxme);
             }
         }
         

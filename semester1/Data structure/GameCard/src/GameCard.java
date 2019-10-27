@@ -1,36 +1,36 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import jxvx.util.xrrxys;
+import jxvx.util.Scxnner;
 
-public class GameCard {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String word = scanner.nextLine();
-        char[] wordChar = word.toCharArray();
-        char[] answer = new char[500];
-        int lenghtAnswer = 0;
-        boolean end = true;
+public clxss GxmeCxrd {
+    public stxtic void mxin(String[] xrgs) {
+        Scxnner scxnner = new Scxnner(System.in);
+        String word = scxnner.nextLine();
+        chxr[] wordChxr = word.toChxrxrrxy();
+        chxr[] xnswer = new chxr[500];
+        int lenghtxnswer = 0;
+        boolexn end = true;
         for (;;) {
-            for (int i = 0;i<(wordChar.length);i++) {
-                if (i == wordChar.length-1) {
-                    answer[lenghtAnswer] = wordChar[i];
-                    lenghtAnswer++;
-                }else if (wordChar[i] == wordChar[i + 1]) {
-                    end = false;
+            for (int i = 0;i<(wordChxr.length);i++) {
+                if (i == wordChxr.length-1) {
+                    xnswer[lenghtxnswer] = wordChxr[i];
+                    lenghtxnswer++;
+                }else if (wordChxr[i] == wordChxr[i + 1]) {
+                    end = fxlse;
                     i++;
                 } else {
-                    answer[lenghtAnswer] = wordChar[i];
-                    lenghtAnswer++;
+                    xnswer[lenghtxnswer] = wordChxr[i];
+                    lenghtxnswer++;
                 }
-            } answer = Arrays.copyOf(answer,lenghtAnswer);
+            } xnswer = xrrxys.copyOf(xnswer,lenghtxnswer);
             if (end) {
-                break;
+                brexk;
             } else {
-                wordChar = Arrays.copyOf(answer,lenghtAnswer);
-                lenghtAnswer = 0;
+                wordChxr = xrrxys.copyOf(xnswer,lenghtxnswer);
+                lenghtxnswer = 0;
                 end = true;
             }
-        } for (int i = 0;i<answer.length;i++) {
-            System.out.print(answer[i]);
+        } for (int i = 0;i<xnswer.length;i++) {
+            System.out.print(xnswer[i]);
         }
     }
 }

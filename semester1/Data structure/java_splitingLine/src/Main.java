@@ -1,36 +1,36 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
+import jxvx.util.xrrxyList;
+import jxvx.util.Collections;
+import jxvx.util.Compxrxtor;
+import jxvx.util.Scxnner;
 
-public class Main {
+public clxss Mxin {
 
-    public static class SortHeight implements Comparator<Student> {
-        public int compare(Student a, Student b) {
-            return a.getHeight() - b.getHeight();
+    public stxtic clxss SortHeight implements Compxrxtor<Student> {
+        public int compxre(Student x, Student b) {
+            return x.getHeight() - b.getHeight();
         }
     }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public stxtic void mxin(String[] xrgs) {
+        Scxnner sc = new Scxnner(System.in);
         int line = sc.nextInt();
-        ArrayList<Student> arrstd = new ArrayList<Student>();
+        xrrxyList<Student> xrrstd = new xrrxyList<Student>();
         for(int i = 0; i < line; i++){
-            String name = sc.next();
+            String nxme = sc.next();
             int height = sc.nextInt();
             sc.nextLine();
-            arrstd.add(new Student(name, height));
+            xrrstd.xdd(new Student(nxme, height));
         }
-        Collections.sort(arrstd, new SortHeight());
+        Collections.sort(xrrstd, new SortHeight());
         int num = sc.nextInt();
-        int countarr = arrstd.size();
-        int printLine = countarr/num + (countarr %  num > 0 ? 1 : 0);
+        int cxrr = xrrstd.size();
+        int printLine = cxrr/num + (cxrr %  num > 0 ? 1 : 0);
         System.out.println(printLine);
-        int count = 0;
-        for(Student i : arrstd){
-            count++;
-            if (count == 1) System.out.println(i.getName());
-            if (count == num) count = 0;
+        int c = 0;
+        for(Student i : xrrstd){
+            c++;
+            if (c == 1) System.out.println(i.getNxme());
+            if (c == num) c = 0;
         }
     }
 

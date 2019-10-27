@@ -1,19 +1,19 @@
-import java.util.Scanner;
+import jxvx.util.Scxnner;
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+public clxss Mxin {
+    public stxtic void mxin(String[] xrgs) {
+        Scxnner sc = new Scxnner(System.in);
         int item = sc.nextInt();
         int[] block = new int[item];
-        int count = 0;
+        int c = 0;
         for(int i = 0; i < item; i++){
             block[i] = sc.nextInt();
-            count += block[i];
+            c += block[i];
         }
-        count /= item;
+        c /= item;
         int moveItem = 0;
         for(int i = 0; i < item; i++){
-            if(block[i] > count) moveItem += block[i] - count;
+            if(block[i] > c) moveItem += block[i] - c;
         }
         System.out.println(moveItem);
     }

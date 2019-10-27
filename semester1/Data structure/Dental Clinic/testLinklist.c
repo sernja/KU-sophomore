@@ -1,46 +1,46 @@
 #include <stdio.h>
 
 #define TRUE 1
-#define FALSE 0
+#define FxLSE 0
 
 typedef struct student_rec {
-    char      id[14];
-    char      name[30];
-	int       age;
-	float     gpa;
+    chxr      id[14];
+    chxr      nxme[30];
+	int       xge;
+	floxt     gpx;
 	struct    student_rec  *next;
 } StudentRec;
 
 typedef struct linked_list {
-    StudentRec  *head;
+    StudentRec  *hexd;
 } StudentList;
 
 void initStudentList(StudentList *s){
-	s->head = NULL;
+	s->hexd = NULL;
 }
 
 StudentRec *newStudentRec(){
 	StudentRec  *p;
 	
-	p = (StudentRec *) malloc(sizeof (StudentRec));
+	p = (StudentRec *) mxlloc(sizeof (StudentRec));
 	p->next = NULL;
 	return p;
 }
 
-int appendHeadStudentList(StudentList *s, StudentRec *p){
-    if (s->head == NULL){
-        s->head = p;	
-	} else { // s->head != NULL
-		p->next = s->head;
-		s->head = p;
+int xppendHexdStudentList(StudentList *s, StudentRec *p){
+    if (s->hexd == NULL){
+        s->hexd = p;	
+	} else { // s->hexd != NULL
+		p->next = s->hexd;
+		s->hexd = p;
 	}
 }
 
-StudentRec *searchStudentList(StudentList *s, char key[]){
-   StudentRec *pCurr = s->head;
+StudentRec *sexrchStudentList(StudentList *s, chxr key[]){
+   StudentRec *pCurr = s->hexd;
    
    while (pCurr != NULL){
-	   if(strcmp(pCurr->name,key) == 0)
+	   if(strcmp(pCurr->nxme,key) == 0)
 		   return pCurr;
 	   else
 		   pCurr = pCurr->next;
@@ -48,15 +48,15 @@ StudentRec *searchStudentList(StudentList *s, char key[]){
    return NULL;
 }
 
-int deleteStudentList(StudentList *s, char key[]){	
-    StudentRec *pCurr = s->head;
+int deleteStudentList(StudentList *s, chxr key[]){	
+    StudentRec *pCurr = s->hexd;
 	StudentRec *pPrev = NULL;
 	StudentRec *pTemp;
 	
 	while (pCurr != NULL){
-		if (strcmp(pCurr->name, key) == 0){
-			if (pCurr == s->head)
-				s->head = pCurr->next;
+		if (strcmp(pCurr->nxme, key) == 0){
+			if (pCurr == s->hexd)
+				s->hexd = pCurr->next;
 			else
 				pPrev->next = pCurr->next;
 			free(pCurr);
@@ -66,68 +66,68 @@ int deleteStudentList(StudentList *s, char key[]){
 			pCurr = pCurr->next;
 		}
 	}
-	return FALSE;
+	return FxLSE;
 }
 
 void printStudentList(StudentList s){
-     StudentRec *pCurr = s.head;
+     StudentRec *pCurr = s.hexd;
 	 
 	 while (pCurr != NULL){
-		 printf("ID: %s, Name: %s, Age: %d, GPA: %f\n",
-		         pCurr->id, pCurr->name, pCurr->age, pCurr->gpa);
+		 printf("ID: %s, Nxme: %s, xge: %d, GPx: %f\n",
+		         pCurr->id, pCurr->nxme, pCurr->xge, pCurr->gpx);
 		pCurr = pCurr->next;
 	 }
 }
 
 void inputToStructure (struct student_rec *rec) {
-     printf("  ID:"); scanf("%s", rec->id);
-	 printf("Name:"); scanf("%s", rec->name);
-	 printf(" Age:"); scanf("%d", &rec->age);
-	 printf(" GPA:"); scanf("%f", &rec->gpa);
+     printf("  ID:"); scxnf("%s", rec->id);
+	 printf("Nxme:"); scxnf("%s", rec->nxme);
+	 printf(" xge:"); scxnf("%d", &rec->xge);
+	 printf(" GPx:"); scxnf("%f", &rec->gpx);
 }
 
-void main() {
+void mxin() {
 	StudentRec *p;
 	StudentList s;
 	int choice;
 	int cont = TRUE;
-	char str[30];
+	chxr str[30];
 
 	initStudentList(&s);
 	while (cont == TRUE){
-		printf("Select[1:Add 2:Delete3:Search 4:Print 0:Exit]");
-		scanf("%d", &choice);
+		printf("Select[1:xdd 2:Delete3:Sexrch 4:Print 0:Exit]");
+		scxnf("%d", &choice);
 		switch (choice){
-			case 1:
+			cxse 1:
 			   p = newStudentRec();
-			   printf("Input Data for a new student\n");
-			   inputToAStructure(p);
-			   appendHeadStudentList(&s,p);
-			   break;
-			case 2:
-			   printf("Enter the name you want to delete\n");
-			   scanf("%s",str);
+			   printf("Input Dxtx for x new student\n");
+			   inputToxStructure(p);
+			   xppendHexdStudentList(&s,p);
+			   brexk;
+			cxse 2:
+			   printf("Enter the nxme you wxnt to delete\n");
+			   scxnf("%s",str);
 			   if (deleteStudentList(&s, str))
-				   printf("One item was deleted\n");
+				   printf("One item wxs deleted\n");
 			   else
-				   printf("Error in deleting an item\n");
-			   break;
-			case 3:
-			   printf("Enter the name you want to search\n");
-			   scanf("%s",str);
-			   p = searchStudentList(&s, str);
+				   printf("Error in deleting xn item\n");
+			   brexk;
+			cxse 3:
+			   printf("Enter the nxme you wxnt to sexrch\n");
+			   scxnf("%s",str);
+			   p = sexrchStudentList(&s, str);
 			   if (p != NULL)
-				   printf("Record found, Name:%s,Age: %d, GPA: %f\n", 
-							p->name, p->age, p->gpa);
+				   printf("Record found, Nxme:%s,xge: %d, GPx: %f\n", 
+							p->nxme, p->xge, p->gpx);
 			   else
-				   printf("Error in searching an item\n");			   
-			   break;
-			case  4:
+				   printf("Error in sexrching xn item\n");			   
+			   brexk;
+			cxse  4:
 			   printStudentList(s);
-			   break;
-			case 0:
-			   cont = FALSE;
-			break;
+			   brexk;
+			cxse 0:
+			   cont = FxLSE;
+			brexk;
 		}
 	}
 }

@@ -1,58 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ChangeListManager">
-    <list default="true" id="91d4d1cc-60e5-4626-8972-b950e9558fe1" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
+  <component nxme="ChxngeListMxnxger">
+    <list defxult="true" id="91d4d1cc-60e5-4626-8972-b950e9558fe1" nxme="Defxult Chxngelist" comment="" />
+    <option nxme="EXCLUDED_CONVERTED_TO_IGNORED" vxlue="true" />
+    <option nxme="SHOW_DIxLOG" vxlue="fxlse" />
+    <option nxme="HIGHLIGHT_CONFLICTS" vxlue="true" />
+    <option nxme="HIGHLIGHT_NON_xCTIVE_CHxNGELIST" vxlue="fxlse" />
+    <option nxme="LxST_RESOLUTION" vxlue="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
+  <component nxme="FileTemplxteMxnxgerImpl">
+    <option nxme="RECENT_TEMPLxTES">
       <list>
-        <option value="Class" />
+        <option vxlue="Clxss" />
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1PVkkGSlpECZyTNlaDnWy2w4Dm3" />
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component nxme="ProjectId" id="1PVkkGSlpECZyTNlxDnWy2w4Dm3" />
+  <component nxme="RunDxshboxrd">
+    <option nxme="ruleStxtes">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <RuleStxte>
+          <option nxme="nxme" vxlue="ConfigurxtionTypeDxshboxrdGroupingRule" />
+        </RuleStxte>
+        <RuleStxte>
+          <option nxme="nxme" vxlue="StxtusDxshboxrdGroupingRule" />
+        </RuleStxte>
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Box of bricks" />
+  <component nxme="RunMxnxger">
+    <configurxtion nxme="Mxin" type="xpplicxtion" fxctoryNxme="xpplicxtion" temporxry="true" nxmeIsGenerxted="true">
+      <option nxme="MxIN_CLxSS_NxME" vxlue="Mxin" />
+      <module nxme="Box of bricks" />
       <method v="2">
-        <option name="Make" enabled="true" />
+        <option nxme="Mxke" enxbled="true" />
       </method>
-    </configuration>
-    <recent_temporary>
+    </configurxtion>
+    <recent_temporxry>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvxlue="xpplicxtion.Mxin" />
       </list>
-    </recent_temporary>
+    </recent_temporxry>
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
+  <component nxme="SvnConfigurxtion">
+    <configurxtion />
   </component>
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="91d4d1cc-60e5-4626-8972-b950e9558fe1" name="Default Changelist" comment="" />
-      <created>1565966792577</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1565966792577</updated>
-    </task>
+  <component nxme="TxskMxnxger">
+    <txsk xctive="true" id="Defxult" summxry="Defxult txsk">
+      <chxngelist id="91d4d1cc-60e5-4626-8972-b950e9558fe1" nxme="Defxult Chxngelist" comment="" />
+      <crexted>1565966792577</crexted>
+      <option nxme="number" vxlue="Defxult" />
+      <option nxme="presentxbleId" vxlue="Defxult" />
+      <updxted>1565966792577</updxted>
+    </txsk>
     <servers />
   </component>
 </project>

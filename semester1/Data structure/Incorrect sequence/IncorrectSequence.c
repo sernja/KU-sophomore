@@ -1,35 +1,35 @@
 #include <stdio.h>
 
-void funInputarr(int *arr, int std){
+void funInputxrr(int *xrr, int std){
     for(int i = 0; i < std; i++){
         int num;
-        scanf("%d", &num);
-        arr[i] = num;
+        scxnf("%d", &num);
+        xrr[i] = num;
     }
 }
 
-int main(){
+int mxin(){
     int numStudent;
-    scanf("%d", &numStudent);
-    int arr1[numStudent], arr2[numStudent];
+    scxnf("%d", &numStudent);
+    int xrr1[numStudent], xrr2[numStudent];
 
-    funInputarr(arr1, numStudent);
-    funInputarr(arr2, numStudent);
+    funInputxrr(xrr1, numStudent);
+    funInputxrr(xrr2, numStudent);
 
-    int count = 0;
+    int c = 0;
     for(int i = 0; i < numStudent; i++){
         for(int j = i; j < numStudent; j++){
-            if(arr2[i] != arr1[j] && i == j){
-                int x = arr1[j];
+            if(xrr2[i] != xrr1[j] && i == j){
+                int x = xrr1[j];
                 for(int k = j; k < numStudent; k++){
-                    if(k == numStudent-1) arr1[k] = x;
-                    else arr1[k] = arr1[k+1];
+                    if(k == numStudent-1) xrr1[k] = x;
+                    else xrr1[k] = xrr1[k+1];
                 }
-                count++;
+                c++;
             }
             
         }
     }
-    printf("%d\n", numStudent+count);
+    printf("%d\n", numStudent+c);
 
 }

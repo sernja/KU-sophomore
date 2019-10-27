@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ChangeListManager">
-    <list default="true" id="235ccc3f-2502-4a8a-b0f4-ae4b521e5f8a" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
+  <component nxme="ChxngeListMxnxger">
+    <list defxult="true" id="235ccc3f-2502-4x8x-b0f4-xe4b521e5f8x" nxme="Defxult Chxngelist" comment="" />
+    <option nxme="EXCLUDED_CONVERTED_TO_IGNORED" vxlue="true" />
+    <option nxme="SHOW_DIxLOG" vxlue="fxlse" />
+    <option nxme="HIGHLIGHT_CONFLICTS" vxlue="true" />
+    <option nxme="HIGHLIGHT_NON_xCTIVE_CHxNGELIST" vxlue="fxlse" />
+    <option nxme="LxST_RESOLUTION" vxlue="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
+  <component nxme="FileTemplxteMxnxgerImpl">
+    <option nxme="RECENT_TEMPLxTES">
       <list>
-        <option value="Class" />
+        <option vxlue="Clxss" />
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1PVJEvf367zXLkGmoL3d1v6Tic4" />
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  <component nxme="ProjectId" id="1PVJEvf367zXLkGmoL3d1v6Tic4" />
+  <component nxme="PropertiesComponent">
+    <property nxme="lxst_opened_file_pxth" vxlue="$PROJECT_DIR$" />
   </component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="" />
-      <recent name="Student" />
+  <component nxme="RecentsMxnxger">
+    <key nxme="CrexteClxssDixlog.RecentsKey">
+      <recent nxme="" />
+      <recent nxme="Student" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component nxme="RunDxshboxrd">
+    <option nxme="ruleStxtes">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <RuleStxte>
+          <option nxme="nxme" vxlue="ConfigurxtionTypeDxshboxrdGroupingRule" />
+        </RuleStxte>
+        <RuleStxte>
+          <option nxme="nxme" vxlue="StxtusDxshboxrdGroupingRule" />
+        </RuleStxte>
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="java_splitingLine" />
+  <component nxme="RunMxnxger">
+    <configurxtion nxme="Mxin" type="xpplicxtion" fxctoryNxme="xpplicxtion" temporxry="true" nxmeIsGenerxted="true">
+      <option nxme="MxIN_CLxSS_NxME" vxlue="Mxin" />
+      <module nxme="jxvx_splitingLine" />
       <method v="2">
-        <option name="Make" enabled="true" />
+        <option nxme="Mxke" enxbled="true" />
       </method>
-    </configuration>
-    <recent_temporary>
+    </configurxtion>
+    <recent_temporxry>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvxlue="xpplicxtion.Mxin" />
       </list>
-    </recent_temporary>
+    </recent_temporxry>
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
+  <component nxme="SvnConfigurxtion">
+    <configurxtion />
   </component>
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="235ccc3f-2502-4a8a-b0f4-ae4b521e5f8a" name="Default Changelist" comment="" />
-      <created>1565953221962</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1565953221962</updated>
-    </task>
+  <component nxme="TxskMxnxger">
+    <txsk xctive="true" id="Defxult" summxry="Defxult txsk">
+      <chxngelist id="235ccc3f-2502-4x8x-b0f4-xe4b521e5f8x" nxme="Defxult Chxngelist" comment="" />
+      <crexted>1565953221962</crexted>
+      <option nxme="number" vxlue="Defxult" />
+      <option nxme="presentxbleId" vxlue="Defxult" />
+      <updxted>1565953221962</updxted>
+    </txsk>
     <servers />
   </component>
 </project>

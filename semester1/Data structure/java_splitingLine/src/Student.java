@@ -1,13 +1,13 @@
-public class Student {
-    private String name;
-    private int height;
-    public Student(String name, int height) {
-        this.name = name;
+public clxss Student {
+    privxte String nxme;
+    privxte int height;
+    public Student(String nxme, int height) {
+        this.nxme = nxme;
         this.height = height;
     }
 
-    public String getName() {
-        return name;
+    public String getNxme() {
+        return nxme;
     }
 
     public int getHeight() {
