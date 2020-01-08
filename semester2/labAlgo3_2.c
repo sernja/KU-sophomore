@@ -1,15 +1,16 @@
 #include <stdio.h>
+#include <math.h>
 
 int sum_abc(int a, int b, int c){
-    printf("\n%d %d %d : %d", a, b, c, (a*a) + (b*b) + (c*c));
-    return (a*a) + (b*b) + (c*c);
+    return pow(a,2) + pow(b,2) + pow(c,2);
 }
 
 void find_abc(int k, int *a, int *b, int *c){
-    *a = -1;
-    int ans;
+    *a = 0, *b = 0, *c = 0;
+    int ans = 0;
     if(k != 0){
-        while(1){
+        *a = -1;
+        while(ans != k){
             *a += 1;
             *b = *a;
             *c = *a;
@@ -18,35 +19,27 @@ void find_abc(int k, int *a, int *b, int *c){
                 *a = -1;
                 break;
             }
-            else if(ans != k){
-                while(1){
+            else {
+                if(ans != k){
+                    *b -= 1;
+                }
+                while(ans != k){
                     *b += 1;
                     *c = *b;
                     ans = sum_abc(*a, *b, *c);
                     if(ans > k){
                         break;
                     }
-                    else if(ans != k){
-                        while (1){
-                            *c += 1;
+                    else{
+                        double num_root_c = sqrt(k - sum_abc(*a, *b, 0));
+                        double num = num_root_c - (int)num_root_c;
+                        if(num == 0){
+                            *c = (int)num_root_c;
                             ans = sum_abc(*a, *b, *c);
-                            if(ans == k){
-                                break;
-                            }
-                            else if(ans > k){
-                                break;
-                            }
                         }
-                    }
-                    if(ans == k){
-                        break;
                     }
                 }
             }
-            if(ans == k){
-                break;
-            }
-            
         }
     }
 }
