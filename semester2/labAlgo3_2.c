@@ -20,16 +20,12 @@ void find_abc(int k, int *a, int *b, int *c){
                 break;
             }
             else {
-                if(ans != k){
-                    *b -= 1;
-                }
+                if(ans != k) *b -= 1;
                 while(ans != k){
                     *b += 1;
                     *c = *b;
                     ans = sum_abc(*a, *b, *c);
-                    if(ans > k){
-                        break;
-                    }
+                    if(ans > k) break;
                     else{
                         double num_root_c = sqrt(k - sum_abc(*a, *b, 0));
                         double num = num_root_c - (int)num_root_c;
