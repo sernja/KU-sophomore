@@ -1,52 +1,34 @@
 #include <stdio.h>
 
-int find_boomb(int y, int c){
+int find_boomb(int x, int y, int w, int h, int arr[w][h]){
     int count = 0;
-    if(y-1 == c) count++;
-    else if(y == c) count++;
-    else if(y+1 == c) count++;
+    if(arr[x][y]) count++;
+    if(arr[x][y+1]) count++;
+    if(arr[x][y+2]) count++;
     return count;
 }
 
 int main(){
     int w, h, n, q, r, c, x, y;
     scanf("%d %d %d %d", &w, &h, &n, &q);
-    int arrn_r[n], arrn_c[n];
+    int arrn_rc[w+2][h+2];
+    for(int i = 0; i < w+2; i++){
+      for(int j = 0; j < h+2; j++) arrn_rc[i][j] = 0;
+    }
     for (int i = 0; i < n; i++){
-        scanf("%d %d", &r, &c);
-        if(w > r && r >= 0 && h > r && h>= 0){
-            arrn_r[i] = r;
-            arrn_c[i] = c;
-        }
-        else{
-            break;
-        }
+        scanf("%d %d", &c, &r);
+        arrn_rc[r+1][c+1] = 1;
     }
     for (int i = 0; i < q; i++){
-        scanf("%d %d", &x, &y);
-        if(h > y && y >= 0 && w > x && x >= 0){
-            int count = 0, boolprint = 1;
-            for(int j = 0; j < n; j++){
-                if(x == arrn_r[j] && y == arrn_c[j]){
-                    printf("Bomb\n");
-                    boolprint = 0;
-                    break;
-                }
-                else{
-                    if(x-1 == arrn_r[j]){
-                        count += find_boomb(y, arrn_c[j]);
-                    }
-                    else if(x == arrn_r[j]){
-                        count += find_boomb(y, arrn_c[j]);
-                    }
-                    else if(x+1 == arrn_r[j]){
-                        count += find_boomb(y, arrn_c[j]);
-                    }
-                }
-            }
-            if(boolprint){
-                printf("%d\n",count);
-            }
+        scanf("%d %d", &y, &x);
+        int count = 0;
+        if(arrn_rc[x+1][y+1] == 1) printf("Bomb\n");
+        else{
+            count += find_boomb(x, y, w, h, arrn_rc);
+            count += find_boomb(x+1, y, w, h, arrn_rc);
+            count += find_boomb(x+2, y, w, h, arrn_rc);
+            printf("%d\n",count);
         }
+        
     }
 }
