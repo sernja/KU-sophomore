@@ -1,28 +1,26 @@
 #include <stdio.h>
-#include <string.h>
 int main(){
-    int line, j, k;
-    char str1[line][100];
-    scanf("%d",&line);
-    printf("line = %d\n", line);
-    for(int i = 0; i < line; i++) {
-        printf("i = %d, ",i);
-        printf("line = %d\n", line);
-        scanf("%s", str1[i]);
+    int line, bool_check = 1, i;
+    scanf("%d", &line);
+    int arr_num[line];
+    for( i = 0; i < line; i++) scanf("%d", &arr_num[i]);
+    for(int j = 0; j < line; j++) {
+        if(j != line-1) printf("%d, ",arr_num[j]);
+        else printf("%d\n",arr_num[j]);
     }
-    // for(int i = 0; i < line-1; i++) {
-    //     // printf("before ");
-    //     for(j =0; str1[i][j] != '\0'; j++);
-    //     for(k = 0; str1[i+1][k] != '\0'; k++);
-    //     if(j > k){
-    //         char temp[100];
-    //         printf("error = %d\n", k);
-    //         strcpy(temp, str1[i]);
-    //         strcpy(str1[i],str1[i+1]);
-    //         strcpy(str1[i+1], temp);
-    //         i = 0;
-    //     }
-    // }
-    
-    // for(int i = 0; i <line; i++) printf("\n%s", str1[i]);
+    while(bool_check){
+        bool_check = 0;
+        for(i = 0; i < line-1; i++){
+            if(arr_num[i] > arr_num[i+1]){
+                bool_check = 1;
+                int temp = arr_num[i];
+                arr_num[i] = arr_num[i+1];
+                arr_num[i+1] = temp;
+                for(int j = 0; j < line; j++) {
+                     if(j != line-1) printf("%d, ",arr_num[j]);
+                     else printf("%d\n",arr_num[j]);
+                }
+            }
+        }
+    }
 }
